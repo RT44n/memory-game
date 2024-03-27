@@ -5,7 +5,7 @@ const InitialDisplay = () => {
 
   return (
     <>
-      <button onClick={GameScreen}>Start New Game</button>
+    <GameScreen/>
     </>
   );
 };

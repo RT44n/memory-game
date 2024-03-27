@@ -1,0 +1,10 @@
+body {
+    width: 100%;
+    padding: 0;
+    border: 0;
+}
+
+.cardHolder{
+    display: flex;
+    flex-direction: row;
+}
