@@ -5,7 +5,7 @@ const getPokeData = () => {
       return response.json(); 
     })
     .then(function(pokeData) {
-      for (let i = 0; i < 12; i++) {
+      for (let i = 0; i < 20; i++) {
         pokeDataArray.push({ 
           Pokename: pokeData.results[i].name, 
          

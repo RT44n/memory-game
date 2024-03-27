@@ -4,6 +4,7 @@ import "../styles/gameScreen.css";
 
 const GameScreen = () => {
   const [pokeData, setPokeData] = useState([]);
+  const [clicked, setClicked] = useState(false)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,8 +26,8 @@ const GameScreen = () => {
 
       {pokeData.map((pokemon, index) => (
         <div className="pokeCard" key={index}>
+          <img className="pokeImage" src={pokemon.pokeImage} alt={pokemon.Pokename} />
           <p>{pokemon.Pokename}</p>
-          <img src={pokemon.pokeImage} alt={pokemon.Pokename} />
         </div>
       ))}
       </div>
