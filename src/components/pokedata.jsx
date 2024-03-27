@@ -1,3 +1,5 @@
+import { flushSync } from "react-dom";
+
 const getPokeData = () => {
   let pokeDataArray = [];
   return fetch('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20', { mode: 'cors' })
@@ -9,7 +11,8 @@ const getPokeData = () => {
         pokeDataArray.push({ 
           Pokename: pokeData.results[i].name, 
          
-          pokeImage: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + (i + 1) + '.png'
+          pokeImage: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + (i + 1) + '.png',
+          
         });
       }
   
